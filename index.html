@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>RAO's WATCH STORE</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-_YgGBSYmZ9_ubqtMGkA35R24eAv2FWPvSA&s');
+    background-size:cover;
+color:whitesmoke;
+}
+
+
+
+header {
+    background:url('https://www.bobswatches.com/rolex-blog/wp-content/uploads/2024/03/How-to-set-a-watch-Banner.jpg');
+    background-size:cover;
+    background-position: center;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Allows for absolute positioning of child elements */
+    height: 110px;
+}
+h1{
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+.cart {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.cart img {
+    width: 30px;
+    margin-left: 5px;
+}
+
+#cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 12px;
+}
+
+main {
+    padding: 20px;
+}
+
+#products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#home, #contact, #about {
+    margin: 40px 0;
+    text-align:center;
+}
+
+.product-card {
+    border: 1px solid gray;
+    border-radius: 15px;
+    background-color: #141414;
+    padding: 16px;
+    text-align: center;
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(20, 20, 20, 0.897);
+    transition: transform 0.3s;
+    height: 400px;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+}
+
+
+.product-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-card .price {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.add-to-cart {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.add-to-cart:hover {
+    background-color: #2980b9;
+}
+
+
+.container {
+            width: 100%;
+            overflow: hidden; /* Ensures that the image doesn't scroll past the viewport */
+            background:url('https://www.silvana.com/app/uploads/movement-gears-background.jpg');
+            border-radius: 10px;
+        }
+
+        .image {
+            position: relative;
+            width: 200px; /* Width of the image */
+            height: 300px;
+            animation: slide 8s linear infinite;
+        }
+        .image-container {
+            max-width: 100%;
+            width: 100%; /* Set width as needed */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add shadow for a subtle 3D effect */
+            border-radius: 8px; /* Rounded corners */
+            overflow: hidden; /* Ensures the border-radius works */
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block; /* Removes bottom gap */
+        }
+        @keyframes slide {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .animation-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin:0;
+    overflow: hidden; /* Ensures that the image doesn't scroll past the viewport */
+            background:url('2wCEAAkGBxAQEA8QEBAQDxUPDw8PDxUQDxAPDw8QFRUWFhUSFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0NFw8QFzUiFyUrLTYtLS8tLS0tLSstLS0tLy8rLS0tLS0rLS0tLS0tNy0rLS0tKy0tKy0rLS0tLS0tLf');
+            border-radius: 10px;
+}
+
+.watch {
+    width: 100%;
+    height: 250px;
+    border-radius: 8%; /* Adjust the size as needed */
+    animation: move-horizontal 15s linear infinite;
+    
+}
+
+@keyframes move-horizontal {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+.about-contact-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 40px 0;
+    }
+
+    .about, .contact {
+        width: 48%; /* Adjust width to ensure spacing */
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .about h2, .contact h2 {
+        margin-top: 0;
+    }
+
+    footer {
+        background: rgb(24, 22, 22);
+        background-size: cover;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+
+        .cart {
+            position: static;
+            margin-top: 10px;
+        }
+
+        header {
+            flex-direction: column;
+        }
+
+        .about-contact-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .about, .contact {
+            width: 90%;
+            margin-bottom: 20px;
+        }
+    }
+
+</style>
+<body>
+    <header>
+        <div class="header-content">
+           <u><i> <h1>MY WATCHES</h1> </i> </u>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+            <div class="cart">
+                <span id="cart-count">0</span>
+                <img src="https://w7.pngwing.com/pngs/800/318/png-transparent-shopping-cart-grocery-store-shopping-card-angle-orange-supermarket-thumbnail.png" alt="Cart">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <b><h2>WELCOME TO OUR STORE!</h2></b>
+           <I> <p>Discover the best products at unbeatable prices.</p></I>
+           <div>
+            <br><br><br>
+           <H2>OUR PRODUCTS 👇👍</h2>
+            <br>
+            <i><u><h2>:: WATCHES ::</h2></u></i>
+           </div>
+        </section>
+
+        <section id="products">
+            <div class="product-card">
+                <img src="https://currenwatches.com.pk/cdn/shop/files/S16a1d22aca9244a19944aad7e16f364fh_1445x.jpg?v=1708428048" alt="Product 1"  >
+                <i><h3>Product 1</h3></i>
+                <p class="price">$19.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://currenwatches.com.pk/cdn/shop/files/dqwqdqdw_0e8ca966-ed05-43aa-91cc-01092038b0d4_600x.jpg?v=1718182781" alt="Product 2" >
+                <i><h3>Product 2</h3></i>
+                <p class="price">$29.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://img.lazcdn.com/g/p/c8bebeeb57e384a7f1a5f332e67dff2d.jpg_960x960q80.jpg_.webp" alt="Product 3"  >
+                <i><h3>Product 3</h3></i>
+                <p class="price">$39.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://i5.walmartimages.com/asr/8748fb00-99f2-4779-8851-a5cc56cd1691.bebf818714f9946a0068edc169e097fd.jpeg" alt="Product 4" >
+                <i><h3>Product 4</h3></i>
+                <p class="price">$19.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://lzd-img-global.slatic.net/g/p/fe724eeee156ab0db00a45ae1d4b8a34.jpg_960x960q80.jpg_.webp" alt="Product 5" >
+                <i><h3>Product 5</h3></i>
+                <p class="price">$29.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://laz-img-sg.alicdn.com/p/08726bde96404ce01400c43799dbbee4.jpg" alt="Product 6" >
+                <i><h3>Product 6</h3></i>
+                <p class="price">$39.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            </section>
+            <br>
+            <section id=HandLook>
+                <div class="container">
+                <img class="image" src="https://rukminim2.flixcart.com/image/750/900/kvpklu80/watch/0/y/b/-original-imag8jmugvgtctsz.jpeg?q=20&crop=false" alt="Animated Image">
+                <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTglEFSTBd58VN-rrCmvmoyxYSNOMEdqpWky3fF9Z5AoiskOEXvyIJvveCTd0qeR05AaUA&usqp=CAU" alt="Animated Image">
+                <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JhlLxgEdd0rdcGrksYNDQRqxB8VjOF7OR2knRSSGhnlu5oaumN7WSMhlnlF1QOAeCWc&usqp=CAU" alt="Animated Image">
+                <img class="image" src="https://images.meesho.com/images/products/347579896/ecolx_512.jpg" alt="Animated Image">
+                <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7zbyQFA6tjIYAhFarezmtT4owjPQ-snzuPebpdwNFYzFCwIV3xnW6G5YxhaEvvfkydFY&usqp=CAU" alt="Animated Image">
+                <img class="image" src="https://currenwatches.com.pk/cdn/shop/products/Untitled-2copy_1b9ca6a9-908d-4527-8a6c-435f6cebeade_1445x.jpg?v=1671091798" alt="Animated Image">
+            </div>>
+                
+            </section>
+           <u><i><h1>:: SMART WATCHES ⌚ ::</h1></i></u>
+          
+        <section id="products">
+            <div class="product-card">
+                <img src="https://cdn.shopify.com/s/files/1/0003/5815/4293/files/Primo_Cam002V1.webp?v=1716294842" alt="Product 1"  >
+                <i><h3>Product 1</h3></i>
+                <p class="price">$19.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://cdn.shopify.com/s/files/1/0003/5815/4293/files/Nitro_Cam002_V4_78aa0751-d553-4aaa-86a4-e02d8dd721ec.webp?v=1719580799" alt="Product 2" >
+                <i><h3>Product 2</h3></i>
+                <p class="price">$29.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://cdn.shopify.com/s/files/1/0003/5815/4293/files/Nitro_Dual_Tone_Chain_Cam002_V4.png?v=1720698639" alt="Product 3"  >
+                <i><h3>Product 3</h3></i>
+                <p class="price">$39.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://cdn.shopify.com/s/files/1/0003/5815/4293/files/Valentina_Cam002V2.webp?v=1716017216" alt="Product 4" >
+                <i><h3>Product 4</h3></i>
+                <p class="price">$19.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://cdn.shopify.com/s/files/1/0003/5815/4293/files/Prestige-Chain_Cam002_V3.png?v=1720699644" alt="Product 5" >
+                <i><h3>Product 5</h3></i>
+                <p class="price">$29.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://cdn.shopify.com/s/files/1/0003/5815/4293/files/Legend_Chain_Cam002_V3.png?v=1720699473" alt="Product 6" >
+                <i><h3>Product 6</h3></i>
+                <p class="price">$39.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            
+            </div>
+        </section>     
+        <div class="image-container">
+            <img src="https://en-pk.svestonwatches.com/cdn/shop/files/Summary_Section_Desktop_b06de241-9ce8-4169-a94a-366c92cdbef1.png?v=1716825389&width=1920" alt="Sveston Watches">
+        </div>
+    </main>
+    <u><i><h1>:: ROLEX WATCHES ⌚::</h1></i></u>
+          
+    <section id="products">
+        <div class="product-card">
+            <img src="https://media.rolex.com/image/upload/q_auto/f_auto/t_v7-grid/c_limit,w_240/v1/catalogue/2024/upright-bba-with-shadow/m136668lb-0001" alt="Product 1"  >
+            <i><h3>Rolex Deepsea</h3></i>
+            <p class="price">$19.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://media.rolex.com/image/upload/q_auto/f_auto/t_v7-grid/c_limit,w_240/v1/catalogue/2024/upright-bba-with-shadow/m126603-0001" alt="Product 2" >
+            <i><h3>Sea-Dweller</h3></i>
+            <p class="price">$29.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://media.rolex.com/image/upload/q_auto/f_auto/t_v7-grid/c_limit,w_240/v1/catalogue/2024/upright-bba-with-shadow/m226627-0001" alt="Product 3"  >
+            <i><h3>Yacht-Master 42</h3></i>
+            <p class="price">$39.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://media.rolex.com/image/upload/q_auto/f_auto/t_v7-grid/c_limit,w_240/v1/catalogue/2024/upright-bba-with-shadow/m336935-0008" alt="Product 4" >
+            <i><h3>Sky-Dweller</h3></i>
+            <p class="price">$19.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://media.rolex.com/image/upload/q_auto/f_auto/t_v7-grid/c_limit,w_240/v1/catalogue/2024/upright-bba-with-shadow/m228398tbr-0042" alt="Product 5" >
+            <i><h3>Day-Date 40</h3></i>
+            <p class="price">$29.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://media.rolex.com/image/upload/q_auto/f_auto/t_v7-grid/c_limit,w_240/v1/catalogue/2024/upright-bba-with-shadow/m126539tbr-0002" alt="Product 6" >
+            <i><h3>Cosmograph Daytona</h3></i>
+            <p class="price">$39.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <section id="products">
+            <div class="product-card">
+                <img src="https://currenwatches.com.pk/cdn/shop/files/S16a1d22aca9244a19944aad7e16f364fh_1445x.jpg?v=1708428048" alt="Product 1"  >
+                <i><h3>Product 1</h3></i>
+                <p class="price">$19.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://currenwatches.com.pk/cdn/shop/files/dqwqdqdw_0e8ca966-ed05-43aa-91cc-01092038b0d4_600x.jpg?v=1718182781" alt="Product 2" >
+                <i><h3>Product 2</h3></i>
+                <p class="price">$29.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://img.lazcdn.com/g/p/c8bebeeb57e384a7f1a5f332e67dff2d.jpg_960x960q80.jpg_.webp" alt="Product 3"  >
+                <i><h3>Product 3</h3></i>
+                <p class="price">$39.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://i5.walmartimages.com/asr/8748fb00-99f2-4779-8851-a5cc56cd1691.bebf818714f9946a0068edc169e097fd.jpeg" alt="Product 4" >
+                <i><h3>Product 4</h3></i>
+                <p class="price">$19.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://lzd-img-global.slatic.net/g/p/fe724eeee156ab0db00a45ae1d4b8a34.jpg_960x960q80.jpg_.webp" alt="Product 5" >
+                <i><h3>Product 5</h3></i>
+                <p class="price">$29.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://laz-img-sg.alicdn.com/p/08726bde96404ce01400c43799dbbee4.jpg" alt="Product 6" >
+                <i><h3>Product 6</h3></i>
+                <p class="price">$39.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+        <div class="animation-container">
+
+            <img src="https://down-my.img.susercontent.com/file/my-11134207-7qul4-ljnpclb2u1qu03_tn" alt="Watch 2" class="watch">
+            <img src="https://m.media-amazon.com/images/I/71+mbc4+h8L._AC_UL1000_.jpg" alt="Watch 3" class="watch">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2ZZZviqurwsDNQc75T17DW8OfbPmTzgBDCQ&s" alt="Watch 4" class="watch">          
+            <img src="https://d1iv6qgcmtzm6l.cloudfront.net/products/lg_naIMVqOxWzEGu7k9USBtsxQraFFruCaDH6JtUrul.jpg" alt="Watch 6" class="watch">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtSdhdT5EAoycY051PtYXjp3RXVxHRwsJZKA&s" alt="Watch 4" class="watch">          
+            <br>
+            </div>
+            
+            <section class="about-contact-container">
+                <div class="about">
+                    <h2>About Us</h2>
+                    <p>We are a leading provider of premium watches, offering the best in quality and style. Our passion for timepieces drives us to deliver products that stand out in craftsmanship and elegance.</p>
+                    <p>Our mission is to offer high-quality watches at competitive prices, ensuring customer satisfaction with every purchase.</p>
+                </div>
+    
+                <div class="contact">
+                    <h2>Contact</h2>
+                    <p>If you have any questions, feel free to contact us:</p>
+                    <ul>
+                        <li>Email: support@watchstore.com</li>
+                        <li>Phone: +123 456 7890</li>
+                        <li>Address: 123 Watch Street, Time City</li>
+                    </ul>
+                </div>
+            </section>
+    
+            <footer>
+        <p>© 2024 My E-Commerce Store</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
